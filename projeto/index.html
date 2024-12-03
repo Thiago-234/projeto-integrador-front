@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralbeat</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <ul class="menu">
+                <li>
+                    <div class="playlist">
+                        <img class="imgnav" src="src/img/playlist 5.png" alt="imagem da playlist">
+                        <a onclick="AVISO()" href="#">Playlist</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="favoritos">
+                        <img class="imgnav" src="src/img/favoritas 4.png" alt="imagem dos favoritos">
+                        <a onclick="AVISO()" href="#">Favoritos</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="logo">
+                <img class="fone" src="src/img/fone.PNG" alt="Fone de ouvido da marca">
+                <h1 class="itim-regular">Centralbeat</h1>
+            </div>
+            <ul class="menu">
+                <li>
+                    <div class="premium">
+                        <img class="imgnav" src="src/img/premium 4.png" alt="imagem do premium">
+                        <a onclick="AVISO()" href="#">Premium</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="configuracoes">
+                        <img class="imgnav" src="src/img/config 4.png" alt="imagem das configurações">
+                        <a onclick="AVISO()" href="#">Configurações</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <div id="adicionarFaixa" class="adicionar">
+            <img class="add" src="+.png" alt="">
+            <p>Adicionar nova faixa</p>
+        </div>
+
+        <dialog id="modal">
+            <div id="fecharModal" class="material-symbols-outlined">
+                close
+            </div>
+            <form id="modalForm" class="modal">
+                <div class="caixas">
+                    <label for="nMusica">Nome da música:</label>
+                    <input id="nMusica" type="text">
+                </div>
+                <div class="caixas">
+                    <label for="nArtista">Artista:</label>
+                    <input id="nArtista" type="text">
+                </div>
+                <div class="caixas">
+                    <label for="nCompositor">Compositor:</label>
+                    <input id="nCompositor" type="text">
+                </div>
+                <div class="caixas">
+                    <label for="gravadora">Gravadora:</label>
+                    <input id="gravadora" type="text">
+                </div>
+                <div class="caixas">
+                    <label for="descricao">Descrição:</label>
+                    <input id="descricao" type="text">
+                </div>
+
+                <div class="caixas">
+                    <label for="url">URL da imagem:</label>
+                    <input id="url" type="text">
+                </div>
+
+                <button onclick="addMusica()" type="submit">Finalizar</button>
+            </form>
+        </dialog>
+
+        <dialog id="modal-Excluir" class="modal-excluir">
+            <p>Deseja realmente excluir essa música?</p>
+            <button id="cancelar" class="cancelar">Cancelar</button>
+            <button onclick="excluirMusica()" id="excl" class="excluir">Excluir</button>
+        </dialog>
+
+        <dialog id="modalEditar">
+            <div id="fecharEditar" onclick="fecharEditar()" class="material-symbols-outlined">
+                close
+            </div>
+            <form class="modal">
+                <div class="caixas">
+                    <label for="editarMusica">Nome da música:</label>
+                    <input id="editarMusica" type="text">
+                </div>
+                <div class="caixas">
+                    <label for="editarArtista">Artista:</label>
+                    <input id="editarArtista" type="text">
+                </div>
+                <div class="caixas">
+                    <label for="editarCompositor">Compositor:</label>
+                    <input id="editarCompositor" type="text">
+                </div>
+                <div class="caixas">
+                    <label for="editarGravadora">Gravadora:</label>
+                    <input id="editarGravadora" type="text">
+                </div>
+                <div class="caixas">
+                    <label for="editarDescricao">Descrição:</label>
+                    <input id="editarDescricao" type="text">
+                </div>
+                <div class="caixas">
+                    <label for="editarUrl">URL da imagem:</label>
+                    <input id="editarUrl" type="text">
+                </div>
+                <div class="botoes">
+                    <button type="button" onclick="salvarEdicao()">Salvar Alterações</button>
+                    <button type="button" id="cancelarEditar">Cancelar</button>
+                </div>
+
+            </form>
+        </dialog>
+
+        <dialog id="modalInformacoes">
+            <div class="info-musica">
+                <div>
+                    <img id="capaMusica" src="" alt="">
+                </div>
+                <div class="informacoes">
+                    <h3><span>Titulo: </span><span id="tituloMusica"></span></h3>
+                    <p>Artista: <span id="artistaMusica"></span></p>
+                    <p>Compositor: <span id="compositorMusica"></span></p>
+                    <p>Gravadora: <span id="gravadoraMusica"></span></p>
+                    <p>Descrição: <span id="descricaoMusica"></span></p>
+                    <button id="fecharInformacoes">Fechar Informações</button>
+                </div>
+            </div>
+        </dialog>
+
+
+        <main style="display: flex; text-align: center;" id="lista">
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

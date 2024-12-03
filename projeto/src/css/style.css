@@ -1,0 +1,371 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: linear-gradient(280deg, #C4A0D9, #93A7C1);
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #9463A0, #8D64A1, #3D76A5);
+    height: 85px;
+    display: flex;
+    justify-content: space-evenly; /* Alinha logo e menu lado a lado */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 0 20px; /* Adiciona padding para espaçamento nas laterais */
+}
+
+.logo {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itim-regular {
+    font-family: "Itim", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+.fone {
+    width: 75px;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    gap: 30px; /* Ajusta o espaçamento entre os itens do menu */
+    list-style: none;
+    align-items: center; /* Garante que o menu fique alinhado verticalmente */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.imgnav {
+    display: block;
+}
+
+.playlist img {
+    margin-left: 15px;
+}
+
+.favoritos img {
+    margin-left: 25px;
+}
+
+.premium img {
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.configuracoes img {
+    margin-left: 50px;
+    width: 40px;
+    margin-top: 4px;
+}
+
+.adicionar{
+    display: flex;
+    color: #FFFCFC;
+    background-color: rgba(209, 201, 201, 44);
+    border: dashed;
+    border-color: #857D7D;
+    width: 300px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 100px;
+    cursor: pointer;
+}
+.adicionar p {
+    margin-left: 20px;
+}
+
+ .modal{
+    background-color: white;
+    width: 450px;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+}
+dialog{
+    border: none;
+    border-radius: 4px;
+    margin: auto auto;
+}
+
+dialog::backdrop{
+    background: rgba(238, 235, 235, 0.3);
+}
+
+.material-symbols-outlined{
+    background-color: red;
+    color: white;
+    cursor: default;
+    margin-left: 430px;
+    padding: 5px;
+}
+.caixas{
+    display: flex;             
+    align-items: center;       
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.caixas input{
+    width: 150px;    
+    font-family: Arial, Helvetica, sans-serif;          
+    padding: 5px;             
+    font-size: 1rem;  
+    margin-right: 20px;       
+    max-width: 100%;  
+}
+
+
+.caixas label{
+    margin-top: 10px;
+    width: 150px;
+    text-align: right;
+    font-size: 16px;
+}
+
+.modal button{
+    height: 40px;
+    width: 95px;
+    border: none;
+    font-weight: bold;
+    margin-left: 170px;
+    background: linear-gradient(90deg, #C4A0D9, #3d76a5);
+    border-radius: 5px;
+}
+
+.musica{
+    margin-left: 100px;
+    display: flex;
+}
+
+.capas{
+    width: 150px;
+    height: 150px;
+}
+.informações{
+    margin:10px;
+}
+
+.informações p{
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    color: #535151;
+    font-weight: 200;
+}
+
+.informações h3{
+    font-family: "inter", sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.titulo{
+    display: flex;
+    cursor: pointer;
+}
+
+.titulo img {
+    height: 30px;
+    width: 30px;
+    margin-top: 17px;
+    margin-left: 10px;
+}
+
+.artista{
+    display: flex;
+}
+
+.artista img{
+    height: 35px;
+    width: 35px;
+    margin-left: 65px;
+    cursor: pointer;
+}
+
+.modal-excluir {
+    background: white;
+    justify-content: center;
+    padding: 20px 20px 50px 20px;
+}
+
+.cancelar{
+    margin-top: 50px;
+    border: 1.5px solid black;
+    background: transparent;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.excluir{
+    margin-top: 50px;
+    border: 1.5px solid black;
+    background: red;
+    padding: 5px;
+    margin-left: 100px;
+}
+
+.modal-excluir::backdrop{
+    background: rgba(238, 235, 235, 0.3);
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+}
+
+.info-musica{
+    display: flex;
+    height: 200px;
+    width: 400px;
+    align-items: center;
+    background: white;
+    font-size: 1.125rem;
+}
+
+.info-musica img{
+    width: 175px;
+    height: 100%;
+}
+
+.informacoes{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.informacoes span{
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.informacoes h3{
+    margin-bottom: 10px;
+}
+
+.informacoes p{
+    margin-bottom: 8px;
+}
+
+.informacoes button{
+    border: 1px solid white;
+    border-radius: 5px;
+    background: red;
+    color: white;
+    padding: 5px;
+    margin-left: 20%;
+    margin-top: 4px;
+}
+
+
+/* Responsividade - Para telas menores */
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 10px; /* Reduz o espaçamento nas laterais */
+    }
+
+    .menu {
+        gap: 20px; /* Reduz o espaçamento entre os itens do menu em telas menores */
+    }
+
+    .menu li a {
+        font-size: 1.3rem; /* Ajusta o tamanho da fonte para dispositivos menores */
+    }
+
+    .fone {
+        width: 60px; /* Ajusta o tamanho do ícone de telefone */
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 15px; /* Reduz o padding nas laterais para telas menores */
+        height: auto; /* Ajusta a altura do header */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Ajusta o tamanho da logo para telas menores */
+    }
+
+    .menu {
+        gap: 15px; /* Reduz o espaçamento entre os itens do menu */
+    }
+
+    .menu li a {
+        font-size: 1.2rem; /* Ajuste o tamanho da fonte para o menu em telas menores */
+        padding: 10px;
+    }
+
+    .fone {
+        width: 50px; /* Ajusta o ícone para telas pequenas */
+    }
+
+    .playlist img {
+        margin-left: 10px;
+    }
+
+    .favoritos img {
+        margin-left: 15px;
+    }
+
+    .premium img {
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    .configuracoes img {
+        margin-left: 20px;
+        width: 30px; /* Diminui o tamanho dos ícones em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px; /* Ajusta o padding para telas muito pequenas */
+    }
+
+    .logo {
+        font-size: 1.2rem; /* Diminui o tamanho da logo em telas muito pequenas */
+        margin: 0;
+    }
+
+    .menu {
+        gap: 10px; /* Ajusta ainda mais o espaçamento entre os itens do menu */
+    }
+
+    .menu li a {
+        font-size: 1rem; /* Ajusta o tamanho das fontes no menu */
+        padding: 8px;
+    }
+
+    .fone {
+        width: 45px; /* Ajusta o ícone para telas muito pequenas */
+    }
+
+    .playlist img,
+    .favoritos img,
+    .premium img,
+    .configuracoes img {
+        margin-left: 0; /* Remove margem para alinhamento adequado */
+    }
+
+    .configuracoes img {
+        width: 25px; /* Diminui o tamanho dos ícones de configurações */
+    }
+}
