@@ -25,7 +25,7 @@ fecharModal.onclick = function () {
     modal.close();
 };
 
-// Função para adicionar a música via POST
+//MÉTODO POST
 async function addMusica(event) {
     event.preventDefault(); // Previne o envio padrão do formulário
 
@@ -61,8 +61,8 @@ async function addMusica(event) {
 
         const data = await response.json(); // Recebe a resposta do back-end (por exemplo, a música criada)
 
-        // Atualiza a interface com a nova música
-        contador++; // incrementa o contador para cada nova música
+        //Adiciona no front
+        contador++; //Incrementa o contador para cada nova música
         const nova = `
         <div id="${contador}" class="musica" style="background-color: white; width: 400px; height: 150px; margin-top: 25px">
             <img class="capas" src="${urlValue}" alt="">
@@ -80,7 +80,7 @@ async function addMusica(event) {
 
         main.innerHTML += nova;
 
-        // Limpar os campos do formulário
+        //Limpa os campos do modal
         nMusica.value = "";
         nArtista.value = "";
         nCompositor.value = "";
@@ -88,7 +88,7 @@ async function addMusica(event) {
         descricao.value = "";
         url.value = "";
 
-        modal.close(); // Fecha o modal após o envio da música
+        modal.close(); //Fecha o modal
     } catch (error) {
         console.error('Erro:', error);
         alert('Falha ao adicionar a música');
@@ -159,7 +159,7 @@ async function deletarMusica() {
             throw new Error('Erro ao excluir a música!');
         }
 
-        // Remove a música da interface (do HTML)
+        //Remove a música do front
         const musicaElement = document.getElementById(`musica-${musicaParaExcluir}`);
         musicaElement.remove(); // Remove a música da lista
 
@@ -210,7 +210,7 @@ btnFecharInfo.onclick = function(){
 
 // Adicione as variáveis do modal de edição
 const modalEditar = document.getElementById("modalEditar"); // modal de edição
-const fecharEditar = document.getElementById("fecharEditar"); // botão para fechar o modal de edição
+const fecharEditar = document.getElementById("fecharEditar"); //Botão para fechar o modal edição
 const cancelarEdicao = document.getElementById("cancelarEditar");
 
 // Variáveis para armazenar os campos do modal de edição
