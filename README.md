@@ -1,6 +1,6 @@
 # CentralBeat
 
-Esse projeto consiste em uma aplicação que você pode adicionar músicas que você gosta, colocar imagens que as referenciam e outros dados da música. Ela tem como objetivo demonstrar as 4 operações de um CRUD(Criar, Ler, Atualizar e Deletar) em um banco de dados. Esse projeto tem como objetivo apimorar o conhecimento dos alunos em Back-end e Front-end, além de como interligar essas duas áreas
+Esse projeto consiste em uma aplicação que você pode adicionar músicas que você gosta, colocar imagens que as referenciam e outros dados da música. Ela tem como objetivo demonstrar as 4 operações de um CRUD(Criar, Ler, Atualizar e Deletar) em um banco de dados. Esse projeto tem como objetivo aprimorar o conhecimento dos alunos em Back-end e Front-end, além de como interligar essas duas áreas.
 
 ## Autores
 
